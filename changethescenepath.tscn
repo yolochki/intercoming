@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://biyybmva1gspp"]
+
+[ext_resource type="FontFile" uid="uid://0r5cd672w6um" path="res://resources/menu/fonts/IosevkaCharonMono-Medium.ttf" id="1_rs004"]
+
+[node name="Node2D" type="Node2D" unique_id=1025034719]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1507427576]
+offset_left = -16.0
+offset_top = -11.0
+offset_right = 1162.0
+offset_bottom = 659.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1631293300]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 322.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("1_rs004")
+theme_override_font_sizes/font_size = 48
+text = "Hey there, pal..."
+
+[node name="Label" type="Label" parent="Label" unique_id=973649896]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 693.0
+offset_bottom = 108.0
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("1_rs004")
+theme_override_font_sizes/font_size = 24
+text = "You see this because you forgot to change the scene
+and I know you may be flattered but to fix this you can:
+just change the string in constant SCENE_PATH to your scene path.
+
+C'mon, it's free!"

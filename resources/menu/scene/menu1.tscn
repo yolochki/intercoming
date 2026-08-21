@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://b2yaxqrm4sc52"]
+
+[ext_resource type="FontFile" uid="uid://dxx87bcrdujsw" path="res://resources/menu/fonts/DSEG14Modern-Bold.ttf" id="1_78sjs"]
+[ext_resource type="FontFile" uid="uid://0r5cd672w6um" path="res://resources/menu/fonts/IosevkaCharonMono-Medium.ttf" id="2_2oubd"]
+[ext_resource type="Texture2D" uid="uid://s7y2t6fptoe7" path="res://resources/menu/icons/cyfral_intel.png" id="3_ndfud"]
+[ext_resource type="Script" uid="uid://57kseod405dt" path="res://resources/menu/scene/csIntel.gd" id="4_ndfud"]
+[ext_resource type="Texture2D" uid="uid://ceyw8typ5bqn0" path="res://resources/menu/icons/mk2003x.png" id="5_g1lxy"]
+[ext_resource type="Script" uid="uid://b35apq7qut3l6" path="res://resources/menu/scene/mk2003xCS.gd" id="6_d0xy8"]
+
+[node name="Control" type="Control" unique_id=396842248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1740228621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -117.0
+offset_right = 156.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14336646, 0, 0.005428905, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2032299737]
+layout_mode = 1
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 337.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_78sjs")
+theme_override_font_sizes/font_size = 32
+text = "intercoming"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1126980359]
+layout_mode = 1
+offset_left = 50.0
+offset_top = 125.0
+offset_right = 326.0
+offset_bottom = 457.0
+theme_override_constants/separation = 4
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1395698731]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(1, 0.43137255, 0.43137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+theme_override_constants/h_separation = 4
+theme_override_fonts/font = ExtResource("2_2oubd")
+theme_override_font_sizes/font_size = 18
+theme_override_icons/icon = ExtResource("3_ndfud")
+text = "Cyfral Intel"
+icon = ExtResource("3_ndfud")
+script = ExtResource("4_ndfud")
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=103521268]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(1, 0.43137255, 0.43137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+theme_override_constants/h_separation = 4
+theme_override_fonts/font = ExtResource("2_2oubd")
+theme_override_font_sizes/font_size = 18
+theme_override_icons/icon = ExtResource("3_ndfud")
+text = "MetakoM MK2003.1"
+icon = ExtResource("5_g1lxy")
+script = ExtResource("6_d0xy8")
