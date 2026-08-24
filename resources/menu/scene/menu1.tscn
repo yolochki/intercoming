@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://ceyw8typ5bqn0" path="res://resources/menu/icons/mk2003x.png" id="5_g1lxy"]
 [ext_resource type="Script" uid="uid://b35apq7qut3l6" path="res://resources/menu/scene/mk2003xCS.gd" id="6_d0xy8"]
 [ext_resource type="Script" uid="uid://djbkg7wlh5gyh" path="res://resources/menu/scene/slogans.gd" id="7_d0xy8"]
+[ext_resource type="Script" uid="uid://clo1lhpjl5yjw" path="res://resources/menu/scene/mk20032.gd" id="7_jy720"]
 [ext_resource type="PackedScene" uid="uid://3ac664k5jq4i" path="res://resources/menu/scene/node_3d.tscn" id="8_kgre3"]
+[ext_resource type="Script" uid="uid://dyrb8ty4meqwm" path="res://resources/menu/scene/SOKOLCS.gd" id="8_yumna"]
 [ext_resource type="Script" uid="uid://d04waflgymuum" path="res://resources/menu/scene/disclaimer.gd" id="9_bk7yg"]
+[ext_resource type="Script" uid="uid://ik11vi1q1eko" path="res://resources/menu/scene/vizit431CS.gd" id="9_lvdma"]
 
 [node name="Control" type="Control" unique_id=396842248]
 layout_mode = 3
@@ -80,6 +83,46 @@ icon = ExtResource("5_g1lxy")
 expand_icon = true
 script = ExtResource("6_d0xy8")
 
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=765016686]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(1, 0.43137255, 0.43137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+theme_override_constants/h_separation = 4
+theme_override_fonts/font = ExtResource("2_2oubd")
+theme_override_font_sizes/font_size = 18
+text = "MetakoM MK2003.2"
+icon = ExtResource("5_g1lxy")
+expand_icon = true
+script = ExtResource("7_jy720")
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1222387160]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(1, 0.43137255, 0.43137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+theme_override_constants/h_separation = 4
+theme_override_fonts/font = ExtResource("2_2oubd")
+theme_override_font_sizes/font_size = 18
+text = "СОКОЛ+"
+expand_icon = true
+script = ExtResource("8_yumna")
+
+[node name="Button5" type="Button" parent="VBoxContainer" unique_id=171821646]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(1, 0.43137255, 0.43137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5370113, 0.5370113, 0.5370113, 1)
+theme_override_constants/h_separation = 4
+theme_override_fonts/font = ExtResource("2_2oubd")
+theme_override_font_sizes/font_size = 18
+text = "ВИZИТ БВД-431DXKCB"
+expand_icon = true
+script = ExtResource("9_lvdma")
+
 [node name="Label" type="Label" parent="." unique_id=505624376]
 layout_mode = 0
 offset_left = 55.0
@@ -88,6 +131,7 @@ offset_right = 100.0
 offset_bottom = 115.0
 theme_override_fonts/font = ExtResource("2_2oubd")
 text = "Привет, пойдём в домофоны?"
+text_direction = 1
 script = ExtResource("7_d0xy8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1726682870]
