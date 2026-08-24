@@ -1,0 +1,37 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # Триггер: когда ты пушишь тег типа v1.0.0-alpha
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Клонируем репозиторий
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # 2. Скачиваем Godot 4
+    - name: Download Godot
+      run: |
+        wget https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+        unzip Godot_v4.7.2-stable_linux.x86_64.zip
+        mv Godot_v4.7.2-stable_linux.x86_64 godot
+
+    # 3. Экспортируем Windows .exe
+    - name: Export Windows
+      run: |
+        ./godot --headless --export-release "Windows Desktop" ./builds/INTERCOMING.exe
+
+    # 4. Создаём релиз на GitHub
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./builds/INTERCOMING.exe
+        generate_release_notes: true  # Автоматический ченджлог из тегов и коммитов
+        prerelease: true               # Помечаем как alpha/пре-релиз
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
