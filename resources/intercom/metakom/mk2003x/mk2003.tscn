@@ -13,135 +13,135 @@
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2118226492]
 offset_left = -11.0
 offset_top = -8.0
-offset_right = 1166.0
+offset_right = 1304.0
 offset_bottom = 657.0
 
 [node name="Mk20032" type="Sprite2D" parent="." unique_id=1076004315]
-position = Vector2(602, 315)
+position = Vector2(632.5, 329)
 texture = ExtResource("1_j2bxw")
 
 [node name="Button" type="Button" parent="." unique_id=598983430]
-offset_left = 578.0
-offset_top = 343.0
-offset_right = 604.0
-offset_bottom = 368.0
+offset_left = 608.5
+offset_top = 357.0
+offset_right = 634.5
+offset_bottom = 382.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 
 [node name="Button2" type="Button" parent="." unique_id=1212815334]
-offset_left = 620.0
-offset_top = 345.0
-offset_right = 646.0
-offset_bottom = 370.0
+offset_left = 650.5
+offset_top = 359.0
+offset_right = 676.5
+offset_bottom = 384.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "2"
 
 [node name="Button3" type="Button" parent="." unique_id=1702736197]
-offset_left = 661.0
-offset_top = 345.0
-offset_right = 687.0
-offset_bottom = 370.0
+offset_left = 691.5
+offset_top = 359.0
+offset_right = 717.5
+offset_bottom = 384.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "3"
 
 [node name="Button4" type="Button" parent="." unique_id=1728972630]
-offset_left = 579.0
-offset_top = 386.0
-offset_right = 605.0
-offset_bottom = 411.0
+offset_left = 609.5
+offset_top = 400.0
+offset_right = 635.5
+offset_bottom = 425.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "4"
 
 [node name="Button5" type="Button" parent="." unique_id=985587754]
-offset_left = 619.0
-offset_top = 385.0
-offset_right = 645.0
-offset_bottom = 410.0
+offset_left = 649.5
+offset_top = 399.0
+offset_right = 675.5
+offset_bottom = 424.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "5"
 
 [node name="Button6" type="Button" parent="." unique_id=768450012]
-offset_left = 660.0
-offset_top = 386.0
-offset_right = 686.0
-offset_bottom = 411.0
+offset_left = 690.5
+offset_top = 400.0
+offset_right = 716.5
+offset_bottom = 425.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "6"
 
 [node name="Button7" type="Button" parent="." unique_id=738743659]
-offset_left = 580.0
-offset_top = 427.0
-offset_right = 606.0
-offset_bottom = 452.0
+offset_left = 610.5
+offset_top = 441.0
+offset_right = 636.5
+offset_bottom = 466.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "7"
 
 [node name="Button8" type="Button" parent="." unique_id=1504305232]
-offset_left = 619.0
-offset_top = 426.0
-offset_right = 645.0
-offset_bottom = 451.0
+offset_left = 649.5
+offset_top = 440.0
+offset_right = 675.5
+offset_bottom = 465.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "8"
 
 [node name="Button9" type="Button" parent="." unique_id=2095434366]
-offset_left = 661.0
-offset_top = 427.0
-offset_right = 687.0
-offset_bottom = 452.0
+offset_left = 691.5
+offset_top = 441.0
+offset_right = 717.5
+offset_bottom = 466.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "9"
 
 [node name="Button10" type="Button" parent="." unique_id=613453405]
-offset_left = 579.0
-offset_top = 467.0
-offset_right = 605.0
-offset_bottom = 492.0
+offset_left = 609.5
+offset_top = 481.0
+offset_right = 635.5
+offset_bottom = 506.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("3_jh51t")
 
 [node name="Button11" type="Button" parent="." unique_id=179907287]
-offset_left = 621.0
-offset_top = 469.0
-offset_right = 647.0
-offset_bottom = 494.0
+offset_left = 651.5
+offset_top = 483.0
+offset_right = 677.5
+offset_bottom = 508.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("2_n45ei")
 digit = "0"
 
 [node name="Button12" type="Button" parent="." unique_id=908942843]
-offset_left = 662.0
-offset_top = 468.0
-offset_right = 688.0
-offset_bottom = 493.0
+offset_left = 692.5
+offset_top = 482.0
+offset_right = 718.5
+offset_bottom = 507.0
 mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource("4_87pj3")
 
 [node name="display" type="ColorRect" parent="." unique_id=675842242]
-offset_left = 580.0
-offset_top = 241.0
-offset_right = 681.0
-offset_bottom = 291.0
+offset_left = 610.5
+offset_top = 255.0
+offset_right = 711.5
+offset_bottom = 305.0
 color = Color(0.11208589, 1.01901826e-07, 7.069204e-08, 1)
 
 [node name="text" type="Label" parent="display" unique_id=890082040]

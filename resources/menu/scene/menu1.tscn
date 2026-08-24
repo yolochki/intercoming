@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://57kseod405dt" path="res://resources/menu/scene/csIntel.gd" id="4_ndfud"]
 [ext_resource type="Texture2D" uid="uid://ceyw8typ5bqn0" path="res://resources/menu/icons/mk2003x.png" id="5_g1lxy"]
 [ext_resource type="Script" uid="uid://b35apq7qut3l6" path="res://resources/menu/scene/mk2003xCS.gd" id="6_d0xy8"]
+[ext_resource type="Script" uid="uid://djbkg7wlh5gyh" path="res://resources/menu/scene/slogans.gd" id="7_d0xy8"]
+[ext_resource type="PackedScene" uid="uid://3ac664k5jq4i" path="res://resources/menu/scene/node_3d.tscn" id="8_kgre3"]
+[ext_resource type="Script" uid="uid://d04waflgymuum" path="res://resources/menu/scene/disclaimer.gd" id="9_bk7yg"]
 
 [node name="Control" type="Control" unique_id=396842248]
 layout_mode = 3
@@ -28,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.14336646, 0, 0.005428905, 1)
 
-[node name="Label" type="Label" parent="." unique_id=2032299737]
+[node name="logo" type="Label" parent="." unique_id=2032299737]
 layout_mode = 1
 offset_left = 50.0
 offset_top = 50.0
@@ -43,9 +46,9 @@ text = "intercoming"
 layout_mode = 1
 offset_left = 50.0
 offset_top = 125.0
-offset_right = 326.0
-offset_bottom = 457.0
-theme_override_constants/separation = 4
+offset_right = 334.0
+offset_bottom = 500.0
+theme_override_constants/separation = 3
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1395698731]
 layout_mode = 2
@@ -59,6 +62,7 @@ theme_override_font_sizes/font_size = 18
 theme_override_icons/icon = ExtResource("3_ndfud")
 text = "Cyfral Intel"
 icon = ExtResource("3_ndfud")
+expand_icon = true
 script = ExtResource("4_ndfud")
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=103521268]
@@ -73,4 +77,50 @@ theme_override_font_sizes/font_size = 18
 theme_override_icons/icon = ExtResource("3_ndfud")
 text = "MetakoM MK2003.1"
 icon = ExtResource("5_g1lxy")
+expand_icon = true
 script = ExtResource("6_d0xy8")
+
+[node name="Label" type="Label" parent="." unique_id=505624376]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 92.0
+offset_right = 100.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("2_2oubd")
+text = "Привет, пойдём в домофоны?"
+script = ExtResource("7_d0xy8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1726682870]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=1727992042]
+offset_left = 936.0
+offset_top = 348.0
+offset_right = 1259.0
+offset_bottom = 646.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=1786011710]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(323, 298)
+render_target_update_mode = 4
+
+[node name="Node3D" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=893058983 instance=ExtResource("8_kgre3")]
+
+[node name="Label2" type="Label" parent="." unique_id=327113823]
+layout_mode = 0
+offset_left = 987.0
+offset_top = 20.0
+offset_right = 1251.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("2_2oubd")
+text = "INTERCOMING is a
+non-profitable
+game with an open-source
+license GPLv3
+
+Please be concerned about seeing
+paid versions of INTERCOMING.
+THIS IS A SCAM!"
+horizontal_alignment = 2
+script = ExtResource("9_bk7yg")
