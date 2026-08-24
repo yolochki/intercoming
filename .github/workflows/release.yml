@@ -1,37 +1,50 @@
-name: Build and Release
+name: Build INTERCOMING
 
 on:
   push:
-    tags:
-      - 'alpha'
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
+  build-windows:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        platform: [windows, linux, web]
     steps:
-    # 1. Клонируем репозиторий
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    # 2. Скачиваем Godot 4
-    - name: Download Godot
-      run: |
-        wget https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
-        unzip Godot_v4.7.2-stable_linux.x86_64.zip
-        mv Godot_v4.7.2-stable_linux.x86_64 godot
+      - name: Setup Godot
+        uses: chickensoft-games/setup-godot@v1
+        with:
+          version: 4.7.2-stable
+          use-dotnet: false
 
-    # 3. Экспортируем Windows .exe
-    - name: Export Windows
-      run: |
-        ./godot --headless --export-release "Windows Desktop" ./builds/INTERCOMING.exe
+      - name: Export Windows
+        if: matrix.platform == 'windows'
+        run: |
+          mkdir -p build
+          godot --headless --export-release "Windows Desktop" ./build/INTERCOMING.exe
+          echo "Windows build complete"
 
-    # 4. Создаём релиз на GitHub
-    - name: Create Release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: ./builds/INTERCOMING.exe
-        generate_release_notes: true  # Автоматический ченджлог из тегов и коммитов
-        prerelease: true               # Помечаем как alpha/пре-релиз
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Export Linux
+        if: matrix.platform == 'linux'
+        run: |
+          mkdir -p build
+          godot --headless --export-release "Linux" ./build/INTERCOMING.x86_64
+          echo "Linux build complete"
+
+      - name: Export Web
+        if: matrix.platform == 'web'
+        run: |
+          mkdir -p build
+          godot --headless --export-release "Web" ./build/INTERCOMING.html
+          echo "Web build complete"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: intercoming-${{ matrix.platform }}
+          path: build/
