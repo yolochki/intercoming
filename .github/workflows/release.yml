@@ -3,15 +3,10 @@ name: Build INTERCOMING
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build-windows:
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        platform: [windows, linux, web]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,29 +17,22 @@ jobs:
           version: 4.7.2-stable
           use-dotnet: false
 
+      - name: Download Export Templates
+        run: |
+          wget -q -O templates.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz
+          unzip -q templates.zip
+          mkdir -p ~/.local/share/godot/export_templates/4.7.2.stable/
+          mv templates/* ~/.local/share/godot/export_templates/4.7.2.stable/
+          ls ~/.local/share/godot/export_templates/4.7.2.stable/
+
       - name: Export Windows
-        if: matrix.platform == 'windows'
         run: |
           mkdir -p build
           godot --headless --export-release "Windows Desktop" ./build/INTERCOMING.exe
           echo "Windows build complete"
 
-      - name: Export Linux
-        if: matrix.platform == 'linux'
-        run: |
-          mkdir -p build
-          godot --headless --export-release "Linux" ./build/INTERCOMING.x86_64
-          echo "Linux build complete"
-
-      - name: Export Web
-        if: matrix.platform == 'web'
-        run: |
-          mkdir -p build
-          godot --headless --export-release "Web" ./build/INTERCOMING.html
-          echo "Web build complete"
-
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: intercoming-${{ matrix.platform }}
-          path: build/
+          name: intercoming-windows
+          path: build/INTERCOMING.exe
