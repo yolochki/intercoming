@@ -1,0 +1,62 @@
+# English translation for INTERCOMING
+# Copyright (C) 2026 Nikita Nazarov
+# This file is distributed under the same license as the INTERCOMING package.
+# FIRST AUTHOR <email@example.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: INTERCOMING 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-24 12:00+0300\n"
+"PO-Revision-Date: 2026-08-24 12:00+0300\n"
+"Last-Translator: Nikita Nazarov <email@example.com>\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: меню/дисклеймер
+msgid "INTERCOMING is a non-profitable game with an open-source license GPLv3.\nPlease be concerned about seeing paid versions of INTERCOMING.\nTHIS IS A SCAM!"
+msgstr ""
+
+#: меню/слоганы
+msgid "There can be your ads."
+msgstr ""
+
+#: меню/слоганы
+msgid "WHY SO LITTLE!?"
+msgstr ""
+
+#: меню/слоганы
+msgid "Iosevka Charon Mono is a cool font."
+msgstr ""
+
+#: меню/слоганы
+msgid "Why the fuck did I open this..."
+msgstr ""
+
+#: меню/слоганы
+msgid "What if I add Easy AntiCheat to the game..."
+msgstr ""
+
+#: меню/слоганы
+msgid "What 'bout Denuvo?"
+msgstr ""
+
+#: меню/слоганы
+msgid "The entrance waits!!"
+msgstr ""
+
+#: меню/слоганы
+msgid "Should I buy a key emulator?"
+msgstr ""
+
+#: меню/слоганы
+msgid "Let's go by the intercoms"
+msgstr ""
+
+#: меню/слоганы
+msgid "#999"
+msgstr ""
