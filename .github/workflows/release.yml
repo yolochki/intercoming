@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - 'v*'  # Триггер: когда ты пушишь тег типа v1.0.0-alpha
+      - 'alpha'
 
 jobs:
   build:
