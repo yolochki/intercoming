@@ -15,6 +15,10 @@ run/main_scene="res://resources/menu/scene/menu1.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DisplayManager="*uid://c8wr5if8lncgx"
+
 [display]
 
 window/size/viewport_width=1280
@@ -22,6 +26,10 @@ window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://locales/en/LC_MESSAGES/intercoming.po", "res://locales/ru/LC_MESSAGES/intercoming.po")
 
 [physics]
 
